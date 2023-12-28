@@ -23,15 +23,15 @@ namespace WPF019
 
         private void AButton_Click(object sender, RoutedEventArgs e)
         {
-            Task.Run(() =>
+            Task.Run(() =>//別スレッドでの処理
             {
                 for (int i = 0; i < 10; i++)
                 {
                     System.Threading.Thread.Sleep(500);
 
-                    Application.Current.Dispatcher.Invoke(() =>
+                    Application.Current.Dispatcher.Invoke(() =>//UIスレッドに戻す構文
                     {
-                        AProgressBar.Value += 10;
+                        AProgressBar.Value += 10;//UIスレッドで行う処理のため、別スレッド上で実行するとエラーになる
                     });
                 }
             });

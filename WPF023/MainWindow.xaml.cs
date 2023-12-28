@@ -17,6 +17,7 @@ namespace WPF023
             var dto1 = new Dto("Name1");
             dto1.Dtos.Add(new Dto("Name1-1"));
             dto1.Dtos.Add(new Dto("Name1-2"));
+            dto1.Dtos[0].Dtos.Add(new Dto("Name1-1-1"));
             _dtos.Add(dto1);
 
             CTreeView.ItemsSource = _dtos;

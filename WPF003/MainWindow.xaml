@@ -26,7 +26,9 @@
                HorizontalAlignment="Right"
                VerticalAlignment="Bottom"
                FontSize="60"
-               Grid.ColumnSpan="4"/>
+               Grid.ColumnSpan="4"
+               Grid.Row="0"
+               Grid.Column="0"/>
 
         <Button Content="AC"
                 Margin="5"

@@ -40,7 +40,8 @@ namespace WPF021
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            var _ = MyListBox.SelectedItem;
+            var __ = MyListBox.SelectedItems;
         }
     }
 

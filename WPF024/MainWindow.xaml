@@ -8,6 +8,7 @@
         Title="MainWindow" Height="300" Width="300">
     <Grid>
         <StackPanel>
+            <!--単語の途中でも省略-->
             <TextBlock Text="AAA BBB CCC DDD EEE FFF"
                        FontSize="20"
                        Width="120"
@@ -16,6 +17,7 @@
                        TextTrimming="CharacterEllipsis"
                        />
 
+            <!--単語単位で省略-->
             <TextBlock Text="AAA BBB CCC DDD EEE FFF"
                        FontSize="20"
                        Width="120"
@@ -24,6 +26,7 @@
                        TextTrimming="WordEllipsis"
                        />
 
+            <!--RunとLinBreakで意図的に下位行-->
             <TextBlock FontSize="20"
                        Width="120">
                 <Run Text="AAA"/>
@@ -31,16 +34,19 @@
                 <Run Text="BBB"/>
             </TextBlock>
 
+            <!--NoWrapは改行なし-->
             <TextBox FontSize="20"
                      Width="120"
                      Text="aaabbbcccdddeeefff abc"
                      TextWrapping="NoWrap"/>
 
+            <!--Wrapは単語の途中でも改行-->
             <TextBox FontSize="20"
                      Width="120"
                      Text="aaabbbcccdddeeefff abc"
                      TextWrapping="Wrap"/>
 
+            <!--WrapWithOverflowは単語単位で改行する-->
             <TextBox FontSize="20"
                      Width="120"
                      Text="aaabbbcccdddeeefff abc"

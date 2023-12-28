@@ -25,6 +25,7 @@ namespace WPF010
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             _customers.Add(new Customer { Id = ++_index, Name = "name" + _index, Phone = "phone" + _index });
+            //CustomerListView.ItemsSource = null;
             //CustomerListView.ItemsSource = _customers;
         }
     }
